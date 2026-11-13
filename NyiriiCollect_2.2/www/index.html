@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="fr" data-theme="light"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>NyiriiCollect 2.2</title>
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#1F4E79">
+<link rel="icon" href="icon-192.png"><style>
+:root{--bg:#f5f6f8;--card:#fff;--alt:#eef1f4;--bd:#d7dce3;--tx:#22282f;--mu:#6b7280;--pr:#3b5f7d;--pc:#fff;--dg:#a83a32;--am:#92600f}
+[data-theme=dark]{--bg:#14181d;--card:#1e242b;--alt:#262d35;--bd:#333b44;--tx:#e7eaed;--mu:#9aa4ad;--pr:#7ea0bd;--pc:#10151a;--dg:#d98f88;--am:#d3ac6e}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);padding-bottom:30px}
+header{background:var(--pr);color:var(--pc);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+header h1{font-size:17px;margin:0}header small{opacity:.85;font-size:11.5px}header button{background:#fff3;border:0;color:inherit;border-radius:50%;width:34px;height:34px;font-size:16px}
+main{max-width:680px;margin:0 auto;padding:14px}.hidden{display:none!important}button{font-family:inherit;cursor:pointer}
+.card{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:10px;color:var(--tx)}
+.card.p{background:var(--pr);color:var(--pc)}.card b{display:block;font-size:15px}.card span{font-size:12.5px;opacity:.8}.card i{font-size:24px;font-style:normal}
+.stats{display:flex;gap:8px;margin:0 0 14px}.stats div{flex:1;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;text-align:center;font-size:11px;color:var(--mu)}.stats b{display:block;font-size:20px;color:var(--pr)}
+h2{color:var(--pr);font-size:18px}.sec h3{color:var(--pr);font-size:16px;margin:20px 0 4px}.note{font-size:12.5px;font-style:italic;color:var(--mu);margin:2px 0 8px}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px;margin-bottom:10px}.ql{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+input[type=text],input[type=number],textarea{width:100%;font:inherit;font-size:15px;padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--alt);color:var(--tx)}
+.opts{display:flex;flex-direction:column;gap:6px}.opt{display:flex;gap:10px;align-items:center;padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--alt);font-size:14.5px}.opt input{width:18px;height:18px}
+.nu{display:flex;gap:8px;align-items:center}.gl{font-size:13px;color:var(--mu);margin:8px 0 4px}.gw{overflow-x:auto}table{border-collapse:collapse;font-size:12.5px}th,td{border:1px solid var(--bd);padding:4px;min-width:110px}th{background:var(--alt)}td input{font-size:13px;padding:6px}
+.bt{padding:13px;border-radius:9px;border:0;background:var(--pr);color:var(--pc);font-weight:700;font-size:14px;width:100%;margin-top:8px}.bt.s{background:var(--alt);color:var(--tx);border:1px solid var(--bd)}.bt.sm{width:auto;padding:7px 10px;margin:0;font-size:12px}.bt.dg{background:none;color:var(--dg);border:1px solid var(--dg)}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;margin-bottom:8px;font-size:13.5px}.acts{display:flex;gap:6px}.muted{color:var(--mu);font-size:12px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:9;max-width:90%;text-align:center}#toast.show{opacity:1}
+@media(min-width:900px){main{max-width:960px}.card{max-width:560px}.stats{max-width:560px}}
+select{width:100%;font:inherit;font-size:15px;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--alt);color:var(--tx);margin-bottom:6px}.auto{display:inline-block;font-size:17px;font-weight:700;color:var(--pr);background:var(--alt);border-radius:8px;padding:8px 14px}main{padding-bottom:90px}
+#snav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);padding:8px 10px;display:flex;gap:8px;align-items:center;z-index:6}#snav .bt{margin:0;flex:1}#sinfo{flex:2;font-size:11.5px;text-align:center;color:var(--mu)}#pb{position:absolute;left:0;top:-3px;height:3px;background:var(--pr);transition:width .2s}
+label.f{display:block;font-size:13px;margin:12px 0 4px;font-weight:600}.sec{border-top:2px solid var(--bd);margin-top:22px;padding-top:2px}#snext{flex:1.4}</style></head><body>
+<header><div><h1>NyiriiCollect 2.2</h1><small>Couscous boule — Adamaoua · Nord · Extrême-Nord</small></div><button id="bth">🌙</button></header>
+<main>
+<div id="v-home"><div class="stats"><div><b id="nA">0</b>Producteurs/vendeurs</div><div><b id="nB">0</b>Consommateurs</div><div><b id="nP">0</b>À synchroniser</div></div>
+<button class="card p" id="gA"><i>🌾</i><div><b>Questionnaire A — Producteurs et vendeurs</b><span>Production, procédé, additifs, commercialisation</span></div></button>
+<button class="card p" id="gB"><i>🍲</i><div><b>Questionnaire B — Consommateurs</b><span>Consommation, préparation, perception (autoproduction si le ménage produit)</span></div></button>
+<button class="card p hidden" id="gD"><i>✏️</i><div><b>Reprendre la fiche en cours</b><span>Brouillon enregistré automatiquement</span></div></button>
+<button class="card" id="gL"><i>📋</i><div><b>Fiches de cet appareil</b><span>Voir, modifier, supprimer</span></div></button>
+<button class="card" id="gS"><i>🔄</i><div><b>Synchroniser maintenant</b><span>Envoie les fiches au serveur commun</span></div></button>
+<button class="card" id="gX"><i>📤</i><div><b>Exporter les fiches</b><span>Au choix : CSV ou Excel (.xlsx)</span></div></button>
+<div id="expc" class="hidden"><button class="bt" id="xC">Exporter en CSV</button><button class="bt" id="xX">Exporter en Excel (.xlsx)</button></div>
+<button class="card" id="gC"><i>⚙️</i><div><b>Réglages</b><span>Enquêteur, serveur, clé d'accès</span></div></button></div>
+<div id="v-entry" class="hidden"><div style="display:flex;justify-content:space-between;align-items:center"><h2 id="ft"></h2><button class="bt s sm" id="bcan">✕ Quitter</button></div><div id="form"></div></div>
+<div id="v-list" class="hidden"><h2>Fiches de cet appareil</h2><button class="bt s sm" id="fl0">Toutes</button> <button class="bt s sm" id="flA">A</button> <button class="bt s sm" id="flB">B</button><div id="rows" style="margin-top:10px"></div><button class="bt s" id="lback">Retour</button></div>
+<div id="v-cfg" class="hidden"><h2>Réglages</h2><label class="f">Nom de l'enquêteur</label><input type="text" id="cE"><label class="f">Adresse du serveur (URL du script Google)</label><input type="text" id="cU"><label class="f">Clé d'accès</label><input type="text" id="cK"><button class="bt" id="cs">Enregistrer</button><button class="bt s" id="cb">Retour</button></div>
+</main><div id="snav" class="hidden"><div id="pb"></div><div id="sinfo"></div><button class="bt" id="snext">Enregistrer ✓</button></div><div id="toast"></div><script src="xlsx.full.min.js"></script><script src="questions.js"></script><script src="app.js"></script></body></html>
